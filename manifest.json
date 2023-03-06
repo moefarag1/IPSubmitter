@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "IP Address Submitter",
+  "version": "1.0.0",
+  "description": "Submits IP addresses to a specified URL.",
+  "host_permissions": ["https://hostedby-hwphkwyqoq-uc.a.run.app/findip?ip=*"],
+  "action": {
+    "default_title": "Submit IP Address"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["form.html", "result.html"],
+      "matches": ["https://*/*"]
+    }
+  ]
+}
